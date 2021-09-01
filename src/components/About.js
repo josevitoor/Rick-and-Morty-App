@@ -62,7 +62,7 @@ export default function About(props) {
                                 <center>
                                     <Avatar size={256} src={'https://avatars.githubusercontent.com/u/30270495?v=4'}></Avatar>
                                     <Typography.Title level={4} style={{ color: 'white', margin: '24px 16px', padding: 24 }}>
-                                        José Vitor
+                                        Thiago Vinícius
                                     </Typography.Title>
                                 </center>
                             </Col>
