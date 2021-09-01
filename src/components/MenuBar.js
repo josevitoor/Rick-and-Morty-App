@@ -24,9 +24,12 @@ class MenuBar extends React.Component {
 
     return (
       <Affix >
-        <center>
-          <img src="https://occ-0-1068-92.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABQOxGMxzPfr3lvtrDxZ9ahcGCw4wMQsdBljUXHiuon2Oa1SmjgGWYx-QWkyLuFwEaguoI3yaq592H-XkHzLbtgh5Pu9ljDJV6AzS.png?r=1ab" alt="Rick And Morty Logo" style={{height: '100%', width: '100%', marginBottom: '20px'}}/>
-        </center>
+
+        <Link to="/">
+          <center>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/2560px-Rick_and_Morty.svg.png" alt="Rick And Morty Logo" style={{ height: '80%', width: '80%', marginBottom: '20px', marginTop: '20px' }} />
+          </center>
+        </Link>
         <Menu
           defaultSelectedKeys={this.props.defaultSelected}
           defaultOpenKeys={['sub1']}

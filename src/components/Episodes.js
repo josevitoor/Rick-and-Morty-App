@@ -92,16 +92,18 @@ export default function Episodes(props) {
                         <Typography.Title level={2} style={{ color: 'white', padding: 24 }}>
                             Episodes
                         </Typography.Title>
-                        <Collapse defaultActiveKey="0" ghost accordion style={{ backgroundColor: '#111c27' }}>
+                        <Collapse defaultActiveKey="0" ghost style={{ backgroundColor: '#111c27' }}>
                             {episodes}
                         </Collapse>
-                        <Footer style={{ color: 'white', textAlign: 'center', backgroundColor: '#111c27' }}>
-                            Created by José Vítor de Freitas Cunha and Thiago Vinícius Azevedo de Oliveira <br/>
-                            <GithubOutlined />  @Kathamala / @josevitoor
-                        </Footer>        
+                        <Footer style={{ backgroundColor: '#111c27' }}>
+                            <Typography style={{ color: 'white', textAlign: 'center' }}>
+                                Created by José Vítor de Freitas Cunha and Thiago Vinícius Azevedo de Oliveira <br />
+                                <a href={'https://github.com/Kathamala'} target="_blank"><GithubOutlined /> @Kathamala</a> | <a href={'https://github.com/josevitoor'} target="_blank"><GithubOutlined /> @josevitoor</a>
+                            </Typography>
+                        </Footer>
                     </Content>
-                                
-                </Layout>             
+
+                </Layout>
             </Layout>
             <Modal visible={isModalVisible} closeIcon={<CloseOutlined style={{ color: 'white' }} />} onCancel={handleCancel} footer={null} centered bodyStyle={{ backgroundColor: '#111c27' }} >
                 <EpisodeModal modalContent={modalContent} ></EpisodeModal>

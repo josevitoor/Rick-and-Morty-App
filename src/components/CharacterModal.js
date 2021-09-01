@@ -5,7 +5,7 @@ export default function CharacterModal(props) {
     return (
         <>
             <br />
-            <img src={props.modalContent.image} style={{ height: '475px', width: '475px' }} alt={props.modalContent.name} />
+            <center><img src={props.modalContent.image} style={{ height: '60%', width: '60%' }} alt={props.modalContent.name} /></center>
             <br /><br />
             <strong style={{ color: 'white' }}>{props.modalContent.name}</strong><br /><br />
             <p style={{ color: 'white' }}><strong>Species: </strong>{props.modalContent.species}</p>

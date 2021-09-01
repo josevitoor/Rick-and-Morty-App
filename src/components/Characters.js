@@ -17,10 +17,6 @@ export default function Characters(props) {
         setIsModalVisible(true);
     };
 
-    const handleOk = () => {
-        setIsModalVisible(false);
-    };
-
     const handleCancel = () => {
         setIsModalVisible(false);
     };
@@ -60,19 +56,21 @@ export default function Characters(props) {
                         </Typography.Title>
                         <br />
                         <div style={{ display: 'inline' }}>
-                            <Row gutter={16}>
+                            <Row>
                                 {characters}
                             </Row>
                         </div>
-                        <Footer style={{ color: 'white', textAlign: 'center', backgroundColor: '#111c27' }}>
-                            Created by José Vítor de Freitas Cunha and Thiago Vinícius Azevedo de Oliveira <br/>
-                            <GithubOutlined />  @Kathamala / @josevitoor
-                        </Footer>  
+                        <Footer style={{ backgroundColor: '#111c27' }}>
+                            <Typography style={{ color: 'white', textAlign: 'center' }}>
+                                Created by José Vítor de Freitas Cunha and Thiago Vinícius Azevedo de Oliveira <br />
+                                <a href={'https://github.com/Kathamala'} target="_blank"><GithubOutlined /> @Kathamala</a> | <a href={'https://github.com/josevitoor'} target="_blank"><GithubOutlined /> @josevitoor</a>
+                            </Typography>
+                        </Footer>
                     </Content>
                 </Layout>
             </Layout>
 
-            <Modal visible={isModalVisible} closeIcon={<CloseOutlined style={{ color: 'white' }} />} onOk={handleOk} footer={null} onCancel={handleCancel} bodyStyle={{ backgroundColor: '#111c27' }}>
+            <Modal visible={isModalVisible} closeIcon={<CloseOutlined style={{ color: 'white' }} />} centered footer={null} onCancel={handleCancel} bodyStyle={{ backgroundColor: '#111c27' }}>
                 <CharacterModal modalContent={modalContent}></CharacterModal>
             </Modal>
         </>
