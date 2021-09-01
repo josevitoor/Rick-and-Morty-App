@@ -29,7 +29,7 @@ export default function About(props) {
                         </Typography.Title>
                         <Row >
                             <Col span={12}>
-                                <img src={'https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/07/rick-and-morty-1200x900-1.jpg'} style={{ width: '90%', height: '90%', margin: '24px 16px', padding: 24 }} />
+                                <img src={'https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/07/rick-and-morty-1200x900-1.jpg'} style={{ width: '90%', height: '90%', margin: '24px 16px', padding: 24 }} alt={'Rick and Morty Image'} />
                             </Col>
                             <Col span={12}>
                                 <div style={{ width: '100%', padding: 40 }}>
@@ -75,7 +75,7 @@ export default function About(props) {
                         <Footer style={{ backgroundColor: '#111c27' }}>
                             <Typography style={{ color: 'white', textAlign: 'center' }}>
                                 Created by José Vítor de Freitas Cunha and Thiago Vinícius Azevedo de Oliveira <br />
-                                <a href={'https://github.com/Kathamala'} target="_blank"><GithubOutlined /> @Kathamala</a> | <a href={'https://github.com/josevitoor'} target="_blank"><GithubOutlined /> @josevitoor</a>
+                                <a href={'https://github.com/Kathamala'} target="_blank" rel="noreferrer"><GithubOutlined /> @Kathamala</a> | <a href={'https://github.com/josevitoor'} target="_blank" rel="noreferrer"><GithubOutlined /> @josevitoor</a>
                             </Typography>
                         </Footer>
                     </Content>

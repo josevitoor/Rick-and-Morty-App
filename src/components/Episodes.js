@@ -98,7 +98,7 @@ export default function Episodes(props) {
                         <Footer style={{ backgroundColor: '#111c27' }}>
                             <Typography style={{ color: 'white', textAlign: 'center' }}>
                                 Created by José Vítor de Freitas Cunha and Thiago Vinícius Azevedo de Oliveira <br />
-                                <a href={'https://github.com/Kathamala'} target="_blank"><GithubOutlined /> @Kathamala</a> | <a href={'https://github.com/josevitoor'} target="_blank"><GithubOutlined /> @josevitoor</a>
+                                <a href={'https://github.com/Kathamala'} target="_blank" rel="noreferrer"><GithubOutlined /> @Kathamala</a> | <a href={'https://github.com/josevitoor'} target="_blank" rel="noreferrer"><GithubOutlined /> @josevitoor</a>
                             </Typography>
                         </Footer>
                     </Content>
