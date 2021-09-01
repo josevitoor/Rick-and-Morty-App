@@ -2,9 +2,10 @@ import './styles.css'
 import MenuBar from './MenuBar';
 import { Avatar, Modal, Row, Col, Typography, Layout } from 'antd';
 import CharacterModal from './CharacterModal';
+import { CloseOutlined, GithubOutlined } from '@ant-design/icons';
 import React, { useState } from 'react';
 
-const { Sider, Content } = Layout;
+const { Sider, Content, Footer } = Layout;
 
 export default function Characters(props) {
 
@@ -63,12 +64,15 @@ export default function Characters(props) {
                                 {characters}
                             </Row>
                         </div>
-
+                        <Footer style={{ color: 'white', textAlign: 'center', backgroundColor: '#111c27' }}>
+                            Created by José Vítor de Freitas Cunha and Thiago Vinícius Azevedo de Oliveira <br/>
+                            <GithubOutlined />  @Kathamala / @josevitoor
+                        </Footer>  
                     </Content>
                 </Layout>
             </Layout>
 
-            <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+            <Modal visible={isModalVisible} closeIcon={<CloseOutlined style={{ color: 'white' }} />} onOk={handleOk} footer={null} onCancel={handleCancel} bodyStyle={{ backgroundColor: '#111c27' }}>
                 <CharacterModal modalContent={modalContent}></CharacterModal>
             </Modal>
         </>

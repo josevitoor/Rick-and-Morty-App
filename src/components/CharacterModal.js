@@ -1,21 +1,17 @@
 import React from 'react';
-import { Typography } from 'antd';
-const Text = Typography;
 
-export default function EpisodeModal(props) {
-
-    //console.log(props);
+export default function CharacterModal(props) {
 
     return (
         <>
             <br />
             <img src={props.modalContent.image} style={{ height: '475px', width: '475px' }} alt={props.modalContent.name} />
             <br /><br />
-            <strong>{props.modalContent.name}</strong><br /><br />
-            <p><strong>Species: </strong>{props.modalContent.species}</p>
-            <p><strong>Gender: </strong>{props.modalContent.gender}</p>
-            <p><strong>Status: </strong>{props.modalContent.status}</p>
-            <p><strong>Location: </strong>{props.modalContent.location.name}</p>
+            <strong style={{ color: 'white' }}>{props.modalContent.name}</strong><br /><br />
+            <p style={{ color: 'white' }}><strong>Species: </strong>{props.modalContent.species}</p>
+            <p style={{ color: 'white' }}><strong>Gender: </strong>{props.modalContent.gender}</p>
+            <p style={{ color: 'white' }}><strong>Status: </strong>{props.modalContent.status}</p>
+            <p style={{ color: 'white' }}><strong>Location: </strong>{props.modalContent.location.name}</p>
         </>
     )
 }

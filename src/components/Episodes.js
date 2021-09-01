@@ -3,9 +3,9 @@ import MenuBar from './MenuBar';
 import EpisodeModal from './EpisodeModal';
 import './styles.css'
 import React, { useState } from 'react';
-import { CloseOutlined } from '@ant-design/icons';
+import { CloseOutlined, GithubOutlined } from '@ant-design/icons';
 
-const { Sider, Content } = Layout;
+const { Sider, Content, Footer } = Layout;
 
 const { Panel } = Collapse;
 
@@ -23,6 +23,8 @@ export default function Episodes(props) {
         setIsModalVisible(false);
     };
 
+    console.log(props.episodesComplements);
+
     const episodes = props.episodes.map((season, index) => (
         <Panel
             header={<Typography.Title level={4} style={{ color: '#68839d' }}> ↓ Season {index + 1}</Typography.Title>}
@@ -34,7 +36,7 @@ export default function Episodes(props) {
                         return (
                             <Col span={6}>
                                 <center>
-                                    <img src={props.episodesComplements[jndex].img} style={{ height: '90%', width: '90%' }} alt={props.episodesComplements[jndex].img} onClick={() => showModal(ep)} />
+                                    <img src={props.episodesComplements[ep.id - 1]?.img} style={{ height: '90%', width: '90%' }} alt={props.episodesComplements[ep.id - 1]?.img} onClick={() => showModal(ep)} />
                                     <p key={(jndex).toString()} onClick={() => showModal(ep)} style={{ color: 'white' }}>
                                         <strong>{ep.episode}: </strong>{ep.name}
                                     </p>
@@ -93,8 +95,13 @@ export default function Episodes(props) {
                         <Collapse defaultActiveKey="0" ghost accordion style={{ backgroundColor: '#111c27' }}>
                             {episodes}
                         </Collapse>
+                        <Footer style={{ color: 'white', textAlign: 'center', backgroundColor: '#111c27' }}>
+                            Created by José Vítor de Freitas Cunha and Thiago Vinícius Azevedo de Oliveira <br/>
+                            <GithubOutlined />  @Kathamala / @josevitoor
+                        </Footer>        
                     </Content>
-                </Layout>
+                                
+                </Layout>             
             </Layout>
             <Modal visible={isModalVisible} closeIcon={<CloseOutlined style={{ color: 'white' }} />} onCancel={handleCancel} footer={null} centered bodyStyle={{ backgroundColor: '#111c27' }} >
                 <EpisodeModal modalContent={modalContent} ></EpisodeModal>
